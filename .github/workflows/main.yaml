@@ -19,7 +19,7 @@ jobs:
         shell: pwsh
         run: |
           $value2 = "This is the second value"
-          echo "::set-output name=second_value::$value2"
+          echo "::set-output name=second_value::$value2" 
       - name: Check output values
         shell: bash
         run: |
