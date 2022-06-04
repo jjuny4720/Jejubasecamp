@@ -8,16 +8,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      -name: Mask output value
+      - name: Mask output value
         id: first
         shell: bash
         run: |
-          value1='This is the secret value'
-
+          value1='This is the super secret value'
           echo "::add-mask::$value1"
           echo "::set-output name=first_value::$value1"
-
-      -name: Check output value
+      - name: Check output value
         shell: bash
         run: |
-          echo "value: ${{steps.first.outputs.first_value }}"
+          echo "value: ${{ steps.first.outputs.first_value }}"
