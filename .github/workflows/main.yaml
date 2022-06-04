@@ -24,6 +24,18 @@ jobs:
       - name: Say Hello from Second Job
         shell: bash
         run: |
-          echo "Lorm Ipsum"  
+          echo "Lorm Ipsum"
 
-    
+  third_job:
+    name: ' Third Job '
+    needs:
+      - first_job
+      - second_job
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hello from Second Job
+        shell: bash
+        run: |
+          echo "Lorm Ipsum"
