@@ -30,7 +30,7 @@ jobs:
       run: |
         dotnet restore ./api
     
-    - name: Build app
+    - name: Build App
       shell: bash
       run: |
         dotnet build ./api -c Release
